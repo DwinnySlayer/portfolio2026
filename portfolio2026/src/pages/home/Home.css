@@ -1,0 +1,10 @@
+.home {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers your text horizontally */
+    justify-content: center; /* This centers your text vertically */
+    box-sizing: border-box;
+}
