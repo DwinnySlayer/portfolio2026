@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
+
+.profile {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /*flex-direction: column;*/
+    align-items: center; /* This centers your text horizontally */
+    justify-content: center; /* This centers your text vertically */
+    box-sizing: border-box;
+    padding: 50px;
+
+}
+
+.profile-card {
+    width: 50vw;
+    height: 30vw;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    /*gradient border*/
+    padding: 1px;
+    border: 0.1vw;
+    background-image:
+            linear-gradient(white, white),
+            linear-gradient(to right, #11344D 20%, #6EACDA 100%); /* Start transition at 50% */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.profile-left-side {
+    position: relative;
+    /*display: grid;*/
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    width: 40%;
+    height: 100%;
+}
+
+.profile-picture {
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    z-index: 3;
+    pointer-events: none;
+    bottom: 0;
+}
+
+.aboutme-image {
+    position: absolute;
+    width: 88%;
+    height: 30%;
+    z-index: 2;
+    right: 0;
+    pointer-events: none;
+}
+
+.accent-img {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    left:0;
+}
+
+.age-badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    color: #BCC9CD;
+    padding: 0.5rem 1rem;
+    z-index: 4;
+
+    font-family: 'Ramabhadra', sans-serif;
+    font-size: 1.5rem;
+    border-radius: 0 10px 0 0;
+}
+
+/*css for right panel*/
+.profile-right-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    /*background-color: #BCC9CD;*/
+}
+
+.roles-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    height: 10%;
+    background-color: #ffffff;
+    gap: 2vw;
+    padding-left: 1vw;
+    padding-bottom: 0;
+}
+
+.roles-img {
+    width: 1vw;
+    height: 1vw;
+    object-fit: contain;
+    padding-right: 0.2vw
+}
+
+.roles-rectangle {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    width: auto;
+    height: auto;
+
+    background-color: #D9D9D9;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-top: 0.2vw;
+    padding-bottom: 0.2vw;
+    border-radius: 5px;
+}
+
+.section-container {
+    width: 100%;
+    height: auto;
+    background-color: #242424;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /*padding-bottom: 0.5vw;*/
+    padding-top: 0vw;
+}
+
+.section-header-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    padding-left: 0.5vw;
+    align-items: center;
+    padding-top: 0.5vw;
+    background-color: #113047;
+}
+
+.section-icon {
+    width: 1.5vw;
+    height: 1.5vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.section-body-container {
+    width: auto;
+    height: auto;
+    background-color: #ffffff;
+    padding-left: 1vw;
+    padding-bottom: 0.7vw;
+    padding-top: 0;
+}
+
+.logo-description-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.image-logo {
+    width: 2vw;
+    height: 2vw;
+    object-fit: contain; /* Ensures the logo doesn't distort */
+    padding: 0;
+    padding-left: 0.5vw;
+}
+
+.section-body-container-educ {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0.5vw;
+    gap: 0.8vw;
+}
+
+.section-body-container-skills {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #747bff;
+    width: auto;
+    padding-bottom: 0;
+}
+
+.section-body-container-skills-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 1vw;
+    padding-bottom: 0;
+    /*background-color: #ffffff;*/
+}
+
+.section-body-container-skills-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-bottom: 0;
+    /*background-color: #ffffff;*/
+}
+
+.section-body-container-skills-logo {
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    width: 2vw;
+    height: 2vw;
+    padding-bottom: 1vw;
+    gap: 5px;
+}
+
+
+/*responsiveness*/
+/* Responsive adjustments for Tablets and Mobile */
+@media (max-width: 768px) {
+    .profile {
+        padding: 20px; /* Reduce outer padding on small screens */
+    }
+
+    .profile-card {
+        width: 60vw;    /* Take up more screen width */
+        height: 500px;   /* CRITICAL: Let the card grow vertically */
+        flex-direction: column; /* Stack left side (image) on top of right side (info) */
+        min-height: unset;
+    }
+
+    .profile-picture {
+        width: 40vw;
+        height: 60vw;
+    }
+
+    .aboutme-image {
+        width: 45vw;
+        height: 20vw;
+        padding-right: 5vw;
+    }
+
+    .profile-left-side {
+        width: 100%;    /* Take full width when stacked */
+        height: 500px;  /* Give it a fixed height so the photo is visible */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-right-side {
+        width: 100%;    /* Take full width when stacked */
+        height: 300px;   /* Grow based on content */
+    }
+}

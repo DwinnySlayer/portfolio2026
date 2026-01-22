@@ -1,14 +1,13 @@
 /* Container for the whole bar */
 .navbar {
     background-color: #ffffff;
-    height: 80px; /* Set a definitive height */
-    padding: 2rem 2rem; /* Only side padding */
+    height: 5vw; /* Set a definitive height */
+    padding: 2vw 2vw; /* Only side padding */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     display: flex;
     align-items: center; /* Vertical Center */
@@ -42,8 +41,8 @@
     position: relative;
     justify-content: flex-start;
     align-items: center;
-    min-width: 40px;
-    height: 40px;
+    min-width: 40vw;
+    height: 40vw;
 }
 
 /* Ensure icons are hidden initially */
@@ -64,14 +63,14 @@
 
 /* Icons in Navbar */
 .icon-img {
-    width: 2.5em;
-    height: 2.5em;
+    width: 2.5vw;
+    height: 2.5vw;
     display: block;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .icon-img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 /* The toggle button must be on top of everything */
@@ -82,7 +81,6 @@
     pointer-events: auto;
 }
 
-/* Base state: Hidden behind the toggle */
 .menu-items .nav-item {
     position: absolute;
     right: 0;
@@ -91,21 +89,17 @@
     z-index: 1;
 }
 
-/* Give each item a slight offset to the left so they peek out */
-/* item-1 is the closest to the button, item-4 is the furthest left */
-.nav-item.item-1 { left: -5px; z-index: 3; }
-.nav-item.item-2 { left: -10px; z-index: 2; }
-.nav-item.item-3 { left: -15px; z-index: 1; }
-.nav-item.item-4 { left: -20px; z-index: 0; }
+.nav-item.item-1 { left: -0.5vw; z-index: 3; transition-delay: 0.0s; }
+.nav-item.item-2 { left: -1vw; z-index: 2; transition-delay: 0.1s;}
+.nav-item.item-3 { left: -1.5vw; z-index: 1; transition-delay: 0.2s;}
+.nav-item.item-4 { left: -2vw; z-index: 0; transition-delay: 0.3s;}
 
-/* Spread state: Slide out to the left */
-/* We use negative values for translateX to move left from the right-aligned button */
-.open .item-1 { transform: translateX(70px); opacity: 1; pointer-events: auto; }
-.open .item-2 { transform: translateX(140px); opacity: 1; pointer-events: auto; }
-.open .item-3 { transform: translateX(210px); opacity: 1; pointer-events: auto; }
-.open .item-4 { transform: translateX(280px); opacity: 1; pointer-events: auto; }
+.open .item-1 { transform: translateX(4vw); opacity: 1; pointer-events: auto; }
+.open .item-2 { transform: translateX(8vw); opacity: 1; pointer-events: auto; }
+.open .item-3 { transform: translateX(12vw); opacity: 1; pointer-events: auto; }
+.open .item-4 { transform: translateX(16vw); opacity: 1; pointer-events: auto; }
 
-/* Staggered entry effect */
+
 .open .item-1 { transition-delay: 0.0s; }
 .open .item-2 { transition-delay: 0.1s; }
 .open .item-3 { transition-delay: 0.2s; }
@@ -117,3 +111,42 @@
     background-color: transparent !important;
     box-shadow: none !important;
 }
+
+/*responsive*/
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 60px; /* Fixed height is better for mobile */
+        padding: 0 20px;
+    }
+
+    .nav-container {
+        margin: 0;
+        width: 100%;
+        justify-content: flex-start; /* Move toggle to the right on mobile */
+    }
+
+    /* 3. Scale Icons for Fingers */
+    .icon-img {
+        width: 30px;  /* Minimum tap target size */
+        height: 30px;
+    }
+
+    /* 4. Change Expansion Logic */
+    /* On mobile, we often want the menu to slide DOWN or spread wider */
+    .nav-links {
+        min-width: 50px;
+        height: 50px;
+    }
+
+    /* Spread state for Mobile: Vertical or wider horizontal */
+    .open .item-1 { transform: translateX(40px); opacity: 1; pointer-events: auto; }
+    .open .item-2 { transform: translateX(80px); opacity: 1; pointer-events: auto; }
+    .open .item-3 { transform: translateX(120px); opacity: 1; pointer-events: auto; }
+    .open .item-4 { transform: translateX(160px); opacity: 1; pointer-events: auto; }
+
+    .nav-item.item-1 { left: -0.5vw; z-index: 3; transition-delay: 0.0s; }
+    .nav-item.item-2 { left: -1vw; z-index: 2; transition-delay: 0.1s;}
+    .nav-item.item-3 { left: -1.5vw; z-index: 1; transition-delay: 0.2s;}
+    .nav-item.item-4 { left: -2vw; z-index: 0; transition-delay: 0.3s;} }

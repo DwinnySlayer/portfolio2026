@@ -1,0 +1,66 @@
+/* Import Montserrat and Ramabhadra */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Ramabhadra&display=swap');
+
+:root {
+    --font-h1: 'Ramabhadra', sans-serif;
+    --font-h2: 'Montserrat', sans-serif;
+    --font-serif: 'EB Garamond', Garamond, serif; /* Professional Serif */
+    --font-h4: 'Ramabhadra', sans-serif;
+}
+
+.text-base {
+    margin: 0;
+    padding: 0;
+}
+
+/* h1: Ramabhadra Bold */
+.variant-h1 {
+    font-family: var(--font-h1);
+    font-weight: bold;
+    font-size: 1.8vw;
+    color: #113047;
+}
+
+/* h2: Montserrat Bold */
+.variant-h2 {
+    font-family: var(--font-h2);
+    font-weight: 700;
+    font-size: 0.8vw;
+    color: #1a1a1a;
+}
+
+/* h3: Garamond Bold */
+.variant-h3 {
+    font-family: var(--font-serif);
+    font-weight: bold;
+    font-size: 1.0vw;
+    color: #1a1a1a;
+}
+
+.variant-h4 {
+    font-family: var(--font-h4);
+    font-weight: bold;
+    font-size: 1.4vw;
+    color: #113047;
+    margin: 0;
+    line-height: 0.1vw;
+    bottom: 0;
+}
+
+/* p1: Garamond Regular */
+.variant-p1 {
+    font-family: var(--font-serif);
+    font-weight: 550;
+    font-size: 1vw;
+    line-height: 1.5;
+    color: #000000;
+}
+
+/* p2: Garamond Regular, Smaller */
+.variant-p2 {
+    font-family: var(--font-serif);
+    font-weight: 450;
+    font-size: 0.95vw;
+    line-height: 1.4;
+    color: #000000;
+}

@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=MonteCarlo&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 .home {
     background-color: #ffffff;
     width: 100%;
@@ -8,3 +10,63 @@
     justify-content: center; /* This centers your text vertically */
     box-sizing: border-box;
 }
+
+.home-title {
+    display: grid;
+    place-items: center;
+}
+
+.title-png  {
+    width: 40vw;
+    height: 20vw;
+
+    grid-area: 1 / 1;
+    object-fit: contain;
+}
+
+.shadow {
+    transform: translate(4px, 4px);
+    opacity: 0.7;
+}
+
+.home-sub-title {
+    text-align: center;
+}
+
+.hello-container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.hello-bold {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 2.5vw;
+}
+
+.im-regular {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 2.5vw;
+}
+
+.name-montecarlo {
+    font-family: 'MonteCarlo', cursive;
+    color: #6EACDA;
+    font-size: 4vw; /* Script fonts usually need to be larger to look balanced */
+    line-height: 1;
+}
+
+.paragraph-intro {
+    /*font-family: 'EB Garamond', serif;*/
+    /*font-size: 1.2vw;*/
+    color: #333333;
+    max-width: 40vw;
+    text-align: center;
+    line-height: 1.5;  /* Adds breathing room between lines of text */
+}
+
