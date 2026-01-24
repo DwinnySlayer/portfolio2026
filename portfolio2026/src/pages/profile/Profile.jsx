@@ -18,8 +18,11 @@ import webstorm from "../../assets/webstormicon.png";
 import figma from "../../assets/figmaicon.png";
 import expicon from "../../assets/expicon.png";
 import sissy from "../../assets/workicon.png";
+import vsicon from "../../assets/vsicon.png";
+import python from "../../assets/pythonicon.png";
 
 
+import { Divider } from '@mui/material';
 import Typography from "../../components/Typography.jsx";
 
 function Profile() {
@@ -59,7 +62,7 @@ function Profile() {
                             </Typography>
                         </div>
                         <div className="section-body-container">
-                            <Typography variant="p2" style={{ lineHeight: 1.2, display: "block", width: "auto"}}>
+                            <Typography variant="p2" style={{ width: "auto", height: "auto"}}>
                                 Hi, I’m Dwin — a design and frontend development enthusiast
                                 who enjoys crafting clean, responsive, and user-centered interfaces.
                                 I’m currently seeking an internship where I can learn, collaborate,
@@ -67,6 +70,8 @@ function Profile() {
                             </Typography>
                         </div>
                     </div>
+
+                    <Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />
 
                     {/*education*/}
                     <div className="section-container">
@@ -77,17 +82,19 @@ function Profile() {
                             </Typography>
                         </div>
                         <div className="section-body-container-educ">
-                            <img src={pup} alt="pupicon" className="image-logo" style={{ marginTop: '4px' }} />
+                            <img src={pup} alt="pupicon" className="image-logo" />
                             <div className="logo-description-container">
-                                <Typography variant="p1" style={{ margin: 0, lineHeight: '1.2' }}>
+                                <Typography variant="p1">
                                     Polytechnic University of the Philippines
                                 </Typography>
-                                <Typography variant="p2" style={{ margin: 0, lineHeight: '1.2', color: '#666' }}>
+                                <Typography variant="p2">
                                     Bachelor of Science in Information Technology
                                 </Typography>
                             </div>
                         </div>
                     </div>
+
+                    <Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />
 
                     {/*skills*/}
                     <div className="section-container">
@@ -107,6 +114,7 @@ function Profile() {
                                     <img src={js} alt="icon" className="icon-img"></img>
                                     <img src={html} alt="icon" className="icon-img"></img>
                                     <img src={css} alt="icon" className="icon-img"></img>
+                                    <img src={python} alt="icon" className="icon-img"></img>
                                 </div>
                             </div>
                             <div className="section-body-container-skills-right">
@@ -116,10 +124,13 @@ function Profile() {
                                 <div className="section-body-container-skills-logo">
                                     <img src={webstorm} alt="icon" className="icon-img"></img>
                                     <img src={figma} alt="icon" className="icon-img"></img>
+                                    <img src={vsicon} alt="icon" className="icon-img"></img>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />
 
                     {/*experience*/}
                     <div className="section-container">
@@ -135,7 +146,7 @@ function Profile() {
                                 <Typography variant="p1">
                                     Sissy SoFab Japan Surplus and Variety Hub
                                 </Typography>
-                                <Typography variant="p2" style={{ lineHeight: 0.5, display: "block", width: "auto"}}>
+                                <Typography variant="p2">
                                     Designer | Admin
                                 </Typography>
                             </div>

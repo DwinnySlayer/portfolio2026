@@ -54,7 +54,7 @@
 
 .aboutme-image {
     position: absolute;
-    width: 88%;
+    width: 90%;
     height: 30%;
     z-index: 2;
     right: 0;
@@ -85,6 +85,7 @@
 
 /*css for right panel*/
 .profile-right-side {
+    justify-content: center;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -133,26 +134,27 @@
 .section-container {
     width: 100%;
     height: auto;
-    background-color: #242424;
+    background-color: #ffffff;
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     /*padding-bottom: 0.5vw;*/
     padding-top: 0vw;
+    /*justify-content: center;*/
 }
 
 .section-header-container {
     width: auto;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: row;
     /*align-items: center;*/
-    /*justify-content: space-between;*/
+    /*justify-content: center;*/
     padding-left: 0.5vw;
     align-items: center;
-    padding-top: 0.5vw;
-    background-color: #113047;
+    /*padding-top: 0.5vw;*/
+    /*background-color: #ffffff;*/
 }
 
 .section-icon {
@@ -165,10 +167,11 @@
 .section-body-container {
     width: auto;
     height: auto;
-    background-color: #ffffff;
+    /*background-color: #6EACDA;*/
     padding-left: 1vw;
-    padding-bottom: 0.7vw;
+    /*padding-bottom: 0.7vw;*/
     padding-top: 0;
+    /*padding-bottom: 0;*/
 }
 
 .logo-description-container {
@@ -178,13 +181,12 @@
     justify-content: center;
     padding-top: 0;
     padding-left: 0;
+    margin: 0;
 }
 
 .image-logo {
     width: 2vw;
     height: 2vw;
-    object-fit: contain; /* Ensures the logo doesn't distort */
-    padding: 0;
     padding-left: 0.5vw;
 }
 
@@ -201,9 +203,10 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    background-color: #747bff;
-    width: auto;
-    padding-bottom: 0;
+    /*background-color: #747bff;*/
+    width: 100%;
+    padding: 0;
+    gap: 0;
 }
 
 .section-body-container-skills-left {
@@ -213,7 +216,9 @@
     width: 50%;
     padding-left: 1vw;
     padding-bottom: 0;
-    /*background-color: #ffffff;*/
+    margin: 0;
+    /*gap: 0;*/
+    /*background-color: #6EACDA;*/
 }
 
 .section-body-container-skills-right {
@@ -222,19 +227,31 @@
     flex-direction: column;
     width: 50%;
     padding-bottom: 0;
+    margin: 0;
+    /*gap:0;*/
     /*background-color: #ffffff;*/
 }
 
 .section-body-container-skills-logo {
-    position: relative;
     display: flex;
-    flex-direction:row;
-    width: 2vw;
-    height: 2vw;
-    padding-bottom: 1vw;
+    flex-direction: row;
+    height: auto; /* Let content define height */
+    gap: 8px;
+    margin-top: 4px;
     gap: 5px;
+    margin: 0;
 }
 
+/*.section-body-container-skills-left p,*/
+/*.section-body-container-skills-right p {*/
+/*    margin: 0;*/
+/*    line-height: 1.2;*/
+/*}*/
+
+/*.skills-header-container p,*/
+/*.skills-header-container h2 {*/
+/*    margin: 0 !important;*/
+/*}*/
 
 /*responsiveness*/
 /* Responsive adjustments for Tablets and Mobile */

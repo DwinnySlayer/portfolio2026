@@ -18,7 +18,11 @@
     font-family: var(--font-h1);
     font-weight: bold;
     font-size: 1.8vw;
-    color: #113047;
+    color: #000000;
+    margin: 0;
+    bottom: 0;
+    /*display: block;*/
+    line-height: 0.1vw;
 }
 
 /* h2: Montserrat Bold */
@@ -41,7 +45,7 @@
     font-family: var(--font-h4);
     font-weight: bold;
     font-size: 1.4vw;
-    color: #113047;
+    color: #000000;
     margin: 0;
     line-height: 0.1vw;
     bottom: 0;
@@ -52,7 +56,9 @@
     font-family: var(--font-serif);
     font-weight: 550;
     font-size: 1vw;
-    line-height: 1.5;
+    line-height: 1.2;
+    margin: 0;
+    display: block;
     color: #000000;
 }
 
@@ -60,7 +66,9 @@
 .variant-p2 {
     font-family: var(--font-serif);
     font-weight: 450;
-    font-size: 0.95vw;
-    line-height: 1.4;
+    font-size: 1vw;
     color: #000000;
+    margin: 0;
+    display: block;
+    line-height: 1.2;
 }
