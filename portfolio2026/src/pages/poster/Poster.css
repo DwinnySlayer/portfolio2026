@@ -1,0 +1,45 @@
+.poster {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5vw;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.poster-container {
+    /*background-color: #6EACDA;*/
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    padding: 1vw;
+    /*border-radius: 10px;*/
+}
+
+.poster-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.poster-image-vertical {
+    width: 30vw;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+}
+
+.poster-image-horizontal {
+    width: 69%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+}

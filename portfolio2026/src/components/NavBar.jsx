@@ -33,11 +33,11 @@ function NavBar() {
                             </div>
 
                             {/* Home Icon */}
-                            <NavLink to="/posters" className="nav-item item-4">
-                                <img src={posterIcon} alt="Poster" className="icon-img"/>
+                            <NavLink to="/design" className="nav-item item-4">
+                                <img src={designIcon} alt="Design" className="icon-img"/>
                             </NavLink>
-                            <NavLink to="/design" className="nav-item item-3">
-                                <img src={designIcon} alt="Design" className="icon-img" />
+                            <NavLink to="/poster" className="nav-item item-3">
+                                <img src={posterIcon} alt="Poster" className="icon-img" />
                             </NavLink>
                             <NavLink to="/profile" className="nav-item item-2">
                                 <img src={profileIcon} alt="Profile" className="icon-img" />
