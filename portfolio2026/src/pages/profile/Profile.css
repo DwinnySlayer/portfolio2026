@@ -298,7 +298,7 @@
 
     .profile-left-side {
         width: 100%;    /* Take full width when stacked */
-        height: auto;  /* Give it a fixed height so the photo is visible */
+        height: 300px;  /* Give it a fixed height so the photo is visible */
         align-items: center;
         justify-content: center;
     }
