@@ -279,7 +279,7 @@
     }
 
     .profile-card {
-        width: 60vw;    /* Take up more screen width */
+        width: 65vw;    /* Take up more screen width */
         height: auto;   /* CRITICAL: Let the card grow vertically */
         flex-direction: column; /* Stack left side (image) on top of right side (info) */
         min-height: unset;
@@ -305,7 +305,7 @@
 
     .profile-right-side {
         width: 100%;    /* Take full width when stacked */
-        height: 300px;   /* Grow based on content */
+        height: 280px;   /* Grow based on content */
         padding-top: 1vw;
         padding-bottom: 1vw;
     }
@@ -357,7 +357,7 @@
     }
 
     .variant-p2 {
-        font-size: 8px;
+        font-size: 10px !important;
         padding-left: 1vw;
         font-weight: 400;
     }
