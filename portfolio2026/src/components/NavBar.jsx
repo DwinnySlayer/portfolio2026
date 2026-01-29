@@ -4,7 +4,7 @@ import './NavBar.css'; // Don't forget to import the CSS!
 import homeIcon from '../assets/Home_Icon.png';
 import profileIcon from '../assets/Profile_Icon.png';
 import designIcon from '../assets/Design_Icon.png';
-import posterIcon from '../assets/Poster_icon.png';
+import posterIcon from '../assets/Poster_Icon.png';
 import openIcon from '../assets/Open_Icon.png'; // The double arrow
 import closeIcon from '../assets/Close_Icon.png'; // The reverse arrow
 import {useState} from "react";
