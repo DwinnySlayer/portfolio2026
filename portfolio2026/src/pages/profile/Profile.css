@@ -262,7 +262,7 @@
 /* Responsive adjustments for Tablets and Mobile */
 @media (max-width: 768px) {
     .profile-title {
-        padding-top: 40px;
+        padding-top: 10px;
         padding-bottom: 0;
         display: flex;
         flex-direction: column;
@@ -275,7 +275,7 @@
     }
 
     .profile {
-        padding: 20px; /* Reduce outer padding on small screens */
+        padding: 40px; /* Reduce outer padding on small screens */
     }
 
     .profile-card {
@@ -286,8 +286,8 @@
     }
 
     .profile-picture {
-        width: 40vw;
-        height: 60vw;
+        width: 35vw;
+        height: 55vw;
     }
 
     .aboutme-image {
@@ -306,6 +306,8 @@
     .profile-right-side {
         width: 100%;    /* Take full width when stacked */
         height: 300px;   /* Grow based on content */
+        padding-top: 1vw;
+        padding-bottom: 1vw;
     }
 
     .roles-container {
