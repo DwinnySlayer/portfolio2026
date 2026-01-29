@@ -75,7 +75,15 @@ function Profile() {
                         </div>
                     </div>
 
-                    <Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />
+                    <Divider
+                        sx={{
+                            width: { xs: '95%', md: '90%' },
+                            mx: 'auto',
+                            my: { xs: 0.5,协议: 1 },
+                            borderColor: '#e0e0e0',
+                            borderBottomWidth: 1
+                        }}
+                    />
 
                     {/*education*/}
                     <div className="section-container">
@@ -98,7 +106,16 @@ function Profile() {
                         </div>
                     </div>
 
-                    <Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />
+                    <Divider
+                        sx={{
+                            width: { xs: '95%', md: '90%' },
+                            mx: 'auto',
+                            my: { xs: 0.5,协议: 1 },
+                            borderColor: '#e0e0e0',
+                            borderBottomWidth: 1
+                        }}
+                    />
+                    {/*<Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />*/}
 
                     {/*skills*/}
                     <div className="section-container">
@@ -115,10 +132,10 @@ function Profile() {
                                     Programming
                                 </Typography>
                                 <div className="section-body-container-skills-logo">
-                                    <img src={js} alt="icon" className="icon-img"></img>
-                                    <img src={html} alt="icon" className="icon-img"></img>
-                                    <img src={css} alt="icon" className="icon-img"></img>
-                                    <img src={python} alt="icon" className="icon-img"></img>
+                                    <img src={js} alt="icon" className="skill-icon-img"></img>
+                                    <img src={html} alt="icon" className="skill-icon-img"></img>
+                                    <img src={css} alt="icon" className="skill-icon-img"></img>
+                                    <img src={python} alt="icon" className="skill-icon-img"></img>
                                 </div>
                             </div>
                             <div className="section-body-container-skills-right">
@@ -126,15 +143,24 @@ function Profile() {
                                     IDEs | Software
                                 </Typography>
                                 <div className="section-body-container-skills-logo">
-                                    <img src={webstorm} alt="icon" className="icon-img"></img>
-                                    <img src={figma} alt="icon" className="icon-img"></img>
-                                    <img src={vsicon} alt="icon" className="icon-img"></img>
+                                    <img src={webstorm} alt="icon" className="skill-icon-img"></img>
+                                    <img src={figma} alt="icon" className="skill-icon-img"></img>
+                                    <img src={vsicon} alt="icon" className="skill-icon-img"></img>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />
+                    <Divider
+                        sx={{
+                            width: { xs: '95%', md: '90%' },
+                            mx: 'auto',
+                            my: { xs: 0.5,协议: 1 },
+                            borderColor: '#e0e0e0',
+                            borderBottomWidth: 1
+                        }}
+                    />
+                    {/*<Divider sx={{ width: '90%', mx: 'auto', my: 1, borderColor: '#e0e0e0', borderBottomWidth: 1 }} />*/}
 
                     {/*experience*/}
                     <div className="section-container">
