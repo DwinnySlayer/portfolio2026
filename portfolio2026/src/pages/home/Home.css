@@ -14,6 +14,7 @@
 .home-title {
     display: grid;
     place-items: center;
+    /*background-color: #747bff;*/
 }
 
 .title-png  {
@@ -70,3 +71,89 @@
     line-height: 1.5;  /* Adds breathing room between lines of text */
 }
 
+/* Update the container to give more breathing room on mobile */
+.home {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Fix the Title Images */
+.home-title {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.title-png {
+    /* On mobile, let the image take up more width */
+    width: 85vw;
+    max-width: 400px;
+    height: auto;
+}
+
+/* The "Hello, I'm Dwin" section */
+.hello-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows text to wrap if the name is too long */
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Adds space between "I'm" and "Dwin" */
+    margin-top: 10px;
+}
+
+/* Mobile specific overrides */
+@media (max-width: 768px) {
+
+    .home {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .home-title {
+        margin-bottom: 0;
+        /*background-color: #747bff;*/
+        /*padding: 10px;*/
+    }
+
+    .home-sub-title {
+        display: flex;
+    }
+
+    .hello-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hello-bold, .im-regular {
+        font-size: 24px; /* Fixed size is often better for readability on mobile */
+    }
+
+    .name-montecarlo {
+        display: flex;
+        font-size: 35px; /* Makes the signature stand out */
+        width: auto;
+    }
+
+    /*.paragraph-intro {*/
+    /*    max-width: 100%; !* Use the full width of the padding *!*/
+    /*    font-size: 100px; !* Standard readable mobile size *!*/
+    /*    line-height: 1.6;*/
+    /*    !*margin-top: 20px;*!*/
+    /*    !*padding: 0 10px;*!*/
+    /*    background-color: #00c6ff;*/
+    /*}*/
+
+    .variant-p1.paragraph-intro {
+        font-size: 15px; /* Use px or rem for mobile! */
+        /*background-color: #00c6ff; !* Now this will definitely show *!*/
+        max-width: 90%;
+        font-weight: 400;
+    }
+
+    .shadow {
+        /* Reduce shadow offset for smaller screens so it doesn't look blurry */
+        transform: translate(2px, 2px);
+    }
+}

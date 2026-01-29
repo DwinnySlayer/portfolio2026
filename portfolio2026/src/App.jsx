@@ -2,6 +2,7 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Posters from "./pages/poster/Poster";
 import Design from "./pages/design/Design";
+import LoadingBar from './components/LoadingBar';
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import "./App.css";
@@ -11,6 +12,7 @@ import NavBar from "./components/NavBar";
 function App() {
     return (
         <Router>
+            <LoadingBar />
             {/* stays visible regardless of the route */}
             <NavBar />
             <Routes>

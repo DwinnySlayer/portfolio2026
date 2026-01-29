@@ -12,7 +12,7 @@ function Home() {
         <div className="home">
             <div className="home-title">
                 <img src={titlehomeshadow} className="title-png shadow" alt="project-title"/>
-                <img src={hometitle} className="title-png main" alt="project-title"/>a
+                <img src={hometitle} className="title-png main" alt="project-title"/>
             </div>
 
             <div className="home-sub-title">

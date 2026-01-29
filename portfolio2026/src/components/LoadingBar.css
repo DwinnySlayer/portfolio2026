@@ -1,0 +1,38 @@
+.loading-bar {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: #fff; /* or transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.loading-bar-line {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
+
+    /* The Animation */
+    animation: loadProgress 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes loadProgress {
+    0% {
+        width: 0%;
+        opacity: 1;
+    }
+    50% {
+        width: 70%;
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0; /* Fades out at the end */
+    }
+}
