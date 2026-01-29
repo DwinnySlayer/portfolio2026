@@ -280,7 +280,7 @@
 
     .profile-card {
         width: 60vw;    /* Take up more screen width */
-        height: 450px;   /* CRITICAL: Let the card grow vertically */
+        height: auto;   /* CRITICAL: Let the card grow vertically */
         flex-direction: column; /* Stack left side (image) on top of right side (info) */
         min-height: unset;
     }
@@ -298,7 +298,7 @@
 
     .profile-left-side {
         width: 100%;    /* Take full width when stacked */
-        height: 500px;  /* Give it a fixed height so the photo is visible */
+        height: auto;  /* Give it a fixed height so the photo is visible */
         align-items: center;
         justify-content: center;
     }
