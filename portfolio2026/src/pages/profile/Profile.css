@@ -305,7 +305,7 @@
 
     .profile-right-side {
         width: 100%;    /* Take full width when stacked */
-        height: 280px;   /* Grow based on content */
+        height: 250px;   /* Grow based on content */
         padding-top: 1vw;
         padding-bottom: 1vw;
     }
