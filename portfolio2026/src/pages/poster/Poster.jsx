@@ -15,6 +15,7 @@ import canva from "../../assets/canvalogo.png"
 import title from "../../assets/titleicon.png"
 import tool from "../../assets/toolicon.png"
 import figma from "../../assets/figmaicon.png"
+import Profile from "../profile/Profile.jsx";
 
 export default function Poster() {
 
