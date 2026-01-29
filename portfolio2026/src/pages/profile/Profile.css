@@ -280,7 +280,7 @@
 
     .profile-card {
         width: 60vw;    /* Take up more screen width */
-        height: auto;   /* CRITICAL: Let the card grow vertically */
+        height: 450px;   /* CRITICAL: Let the card grow vertically */
         flex-direction: column; /* Stack left side (image) on top of right side (info) */
         min-height: unset;
     }
