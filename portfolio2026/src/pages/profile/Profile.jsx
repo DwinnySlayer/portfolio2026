@@ -23,6 +23,7 @@ import python from "../../assets/pythonicon.png";
 import profiletitle from "../../assets/profiletitle.png";
 
 
+
 import { Divider } from '@mui/material';
 import Typography from "../../components/Typography.jsx";
 

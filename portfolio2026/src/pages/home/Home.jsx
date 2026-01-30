@@ -6,6 +6,7 @@ import titlehomeshadow from "../../assets/TitleHomeShadow.png";
 import hometitle from "../../assets/HomeTitle.png";
 import Typography from "../../components/Typography.jsx";
 import jellyfish from "../../assets/jellyfish.png";
+import orbit from "../../assets/orbit.png";
 
 function Home() {
 
@@ -20,6 +21,7 @@ function Home() {
             <div className="home-title">
                 <img src={titlehomeshadow} className="title-png shadow" alt="project-title"/>
                 <img src={hometitle} className="title-png main" alt="project-title"/>
+                <img src={orbit} className="orbit-img" alt="orbit"></img>
             </div>
 
             <div className="home-sub-title">

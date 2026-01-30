@@ -10,9 +10,9 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* This centers your text horizontally */
-    /*justify-content: flex-start; !* This centers your text vertically *!*/
+    justify-content: center; /* This centers your text vertically */
     box-sizing: border-box;
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     /*top: 20px;*/
 }
 
@@ -154,6 +154,15 @@
     /*background-color: #747bff;*/
 }
 
+.orbit-img {
+    padding-top: 10px;
+    width: 55vw; /* Slightly larger than title to frame it? */
+    height: auto;
+    grid-area: 1 / 1; /* This is the magic line */
+    z-index: 1; /* Ensures it sits on top of the title */
+    pointer-events: none; /* Allows you to still click through it if needed */
+}
+
 .title-png  {
     width: 40vw;
     height: 20vw;
@@ -163,8 +172,14 @@
 }
 
 .shadow {
+    grid-area: 1 / 1;
     transform: translate(4px, 4px);
     opacity: 0.7;
+    z-index: 0;
+}
+
+.main {
+    z-index: 2; /* Sits in the middle */
 }
 
 .home-sub-title {
@@ -324,5 +339,14 @@
         animation:
                 itch-bob-right 7s ease-in-out infinite,
                 jelly-pulse 5s ease-in-out infinite;
+    }
+
+    .orbit-img {
+        padding-top: 10px;
+        width: 95vw; /* Slightly larger than title to frame it? */
+        height: auto;
+        grid-area: 1 / 1; /* This is the magic line */
+        z-index: 1; /* Ensures it sits on top of the title */
+        pointer-events: none;
     }
 }

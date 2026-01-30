@@ -10,6 +10,7 @@ import closeIcon from '../assets/Close_Icon.png'; // The reverse arrow
 import {useState} from "react";
 import starfish from "../assets/starfish.png";
 import selfpicture from "../assets/selfpicture.png";
+import shell from "../assets/shell.png";
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +50,7 @@ function NavBar() {
                 <div className="nav-right-side">
                     <img src={starfish} alt="icon" className="starfish-img"></img>
                     <img src={selfpicture} alt="icon" className="icon-img"></img>
+                    <img src={shell} alt="icon" className="starfish-img"></img>
                 </div>
             </div>
         </nav>
