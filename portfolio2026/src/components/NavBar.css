@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;600;700;800&family=MonteCarlo&family=Ramabhadra&family=Poppins:wght@300;400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 .navbar {
-    background-color: #ffffff;
+    background-color: transparent;
     height: 5vw; /* Set a definitive height */
     padding: 2vw 2vw; /* Only side padding */
     position: fixed;
