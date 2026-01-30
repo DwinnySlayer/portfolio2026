@@ -8,6 +8,8 @@ import posterIcon from '../assets/Poster_Icon.png';
 import openIcon from '../assets/Open_Icon.png'; // The double arrow
 import closeIcon from '../assets/Close_Icon.png'; // The reverse arrow
 import {useState} from "react";
+import starfish from "../assets/starfish.png";
+import selfpicture from "../assets/selfpicture.png";
 
 function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +17,8 @@ function NavBar() {
     return (
         <nav className="navbar">
             <div className="nav-container">
-                {/* Logo Icons */}
-                {/* Logo Branding
-                    <Link to="/" className="nav-logo">
-                        <img src={logoIcon} alt="Brand Logo" className="icon-img" />
-                    </Link>
-                */}
-                <div className={`nav-stack ${isOpen ? 'open' : ''}`}>
+                <div className="nav-left-side">
+                    <div className={`nav-stack ${isOpen ? 'open' : ''}`}>
                         <div className="nav-links">
                             {/* The clickable toggle button - always on top */}
                             <div className="nav-item toggle-btn" onClick={() => setIsOpen(!isOpen)}>
@@ -46,6 +43,12 @@ function NavBar() {
                                 <img src={homeIcon} alt="Home" className="icon-img" />
                             </NavLink>
                         </div>
+                    </div>
+                </div>
+
+                <div className="nav-right-side">
+                    <img src={starfish} alt="icon" className="starfish-img"></img>
+                    <img src={selfpicture} alt="icon" className="icon-img"></img>
                 </div>
             </div>
         </nav>

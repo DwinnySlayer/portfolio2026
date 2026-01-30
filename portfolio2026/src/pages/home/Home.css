@@ -1,14 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;600;700;800&family=MonteCarlo&family=Ramabhadra&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=MonteCarlo&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 .home {
+    position: relative;
+    overflow: hidden;
     background-color: #ffffff;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center; /* This centers your text horizontally */
-    justify-content: center; /* This centers your text vertically */
+    /*justify-content: flex-start; !* This centers your text vertically *!*/
     box-sizing: border-box;
+    padding-top: 100px;
+    /*top: 20px;*/
+}
+
+/*@keyframes swim {*/
+/*    0% {*/
+/*        top: 20%;*/
+/*        left: -10%;*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    25% {*/
+/*        top: 40%;*/
+/*        left: 30%;*/
+/*        transform: rotate(50deg);*/
+/*    }*/
+/*    50% {*/
+/*        top: 10%;*/
+/*        left: 60%;*/
+/*        transform: rotate(240deg);*/
+/*    }*/
+/*    75% {*/
+/*        top: 60%;*/
+/*        left: 90%;*/
+/*        transform: rotate(160deg);*/
+/*    }*/
+/*    100% {*/
+/*        top: 20%;*/
+/*        left: 110%; !* Swims off screen to the right *!*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*}*/
+
+/*@keyframes jelly-pulse {*/
+/*    0%, 100% {*/
+/*        transform: scale(1) skew(0deg);*/
+/*        filter: drop-shadow(0 0 10px rgba(110, 172, 218, 0.3));*/
+/*    }*/
+/*    50% {*/
+/*        !* This creates the "contraction" look *!*/
+/*        transform: scale(1.1) skew(5deg);*/
+/*        filter: drop-shadow(0 0 20px rgba(110, 172, 218, 0.6));*/
+/*    }*/
+/*}*/
+
+/*.jellyfish-float {*/
+/*    position: absolute;*/
+/*    width: 15vw;*/
+/*    min-width: 80px;*/
+/*    opacity: 0.6;*/
+/*    z-index: 0;*/
+/*    pointer-events: none;*/
+/*    filter: drop-shadow(0 0 10px rgba(110, 172, 218, 0.3));*/
+/*    animation:*/
+/*            swim 40s ease-in-out infinite,*/
+/*            jelly-pulse 4s ease-in-out infinite;*/
+/*}*/
+
+/* Base styles for both */
+.jelly-itch {
+    position: absolute;
+    width: 28vw;
+    min-width: 100px;
+    opacity: 1.8;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 10px rgba(110, 172, 218, 0.3));
+}
+
+/* Left Jellyfish Position */
+.jelly-itch.left {
+    left: -7vw;
+    top: 15%;
+    animation:
+            itch-bob-left 6s ease-in-out infinite,
+            jelly-pulse 4s ease-in-out infinite;
+}
+
+/* Right Jellyfish Position (Flipped) */
+.jelly-itch.right {
+    right: -7vw;
+    top: 50%;
+    transform: scaleX(-1); /* Flips it to face inward */
+    animation:
+            itch-bob-right 7s ease-in-out infinite,
+            jelly-pulse 5s ease-in-out infinite;
+}
+
+/* Tight vertical "itching" move */
+/*@keyframes itch-bob {*/
+/*    0%, 100% {*/
+/*        margin-top: 0;*/
+/*        transform: rotate(-2deg);*/
+/*    }*/
+/*    50% {*/
+/*        margin-top: 20px; !* Small up and down movement *!*/
+/*        transform: rotate(3deg);*/
+/*    }*/
+/*}*/
+
+/* Animation for the Left side */
+@keyframes itch-bob-left {
+    0%, 100% {
+        transform: rotate(-2deg);
+        margin-top: 0;
+    }
+    50% {
+        transform: rotate(3deg);
+        margin-top: 20px;
+    }
+}
+
+/* Animation for the Right side (Includes the Flip) */
+@keyframes itch-bob-right {
+    0%, 100% {
+        /* Keep scaleX(-1) here so it stays flipped! */
+        transform: scaleX(-1) rotate(-2deg);
+        margin-top: 0;
+    }
+    50% {
+        transform: scaleX(-1) rotate(3deg);
+        margin-top: 20px;
+    }
+}
+
+/* Subtle expansion pulse */
+@keyframes jelly-pulse {
+    0%, 100% {
+        scale: 1;
+        opacity: 0.5;
+    }
+    50% {
+        scale: 1.08;
+        opacity: 0.7;
+    }
 }
 
 .home-title {
@@ -42,24 +179,28 @@
 }
 
 .hello-bold {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 700;
+    /* Montserrat supports 600 (Semi-Bold) */
+    font-family: 'Ramabhadra', sans-serif;
+    /*font-weight: 600;*/
     color: #1a1a1a;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
 }
 
 .im-regular {
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: 400;
+    /* Montserrat supports 200 (Extra-Light) */
+    font-family: 'Ramabhadra', sans-serif;
+    /*font-weight: 200;*/
     color: #000000;
-    font-size: 2.5vw;
+    font-size: 2.2vw;
 }
 
 .name-montecarlo {
     font-family: 'MonteCarlo', cursive;
     color: #6EACDA;
-    font-size: 4vw; /* Script fonts usually need to be larger to look balanced */
-    line-height: 1;
+    font-size: 2.8vw;
+    /* MonteCarlo only has weight 400. To make it look "bolder",
+       use a tiny text-shadow instead of font-weight */
+    text-shadow: 0.5px 0px 0px #6EACDA;
 }
 
 .paragraph-intro {
@@ -86,7 +227,7 @@
 .title-png {
     /* On mobile, let the image take up more width */
     width: 85vw;
-    max-width: 400px;
+    max-width: 600px;
     height: auto;
 }
 
@@ -112,7 +253,7 @@
     }
 
     .home-title {
-        margin-bottom: 0;
+        margin-top: 100px;
         /*background-color: #747bff;*/
         /*padding: 10px;*/
     }
@@ -155,5 +296,33 @@
     .shadow {
         /* Reduce shadow offset for smaller screens so it doesn't look blurry */
         transform: translate(2px, 2px);
+    }
+
+    .jelly-itch {
+        position: absolute;
+        width: 50vw;
+        min-width: 100px;
+        opacity: 1.8;
+        z-index: 0;
+        pointer-events: none;
+        filter: drop-shadow(0 0 10px rgba(110, 172, 218, 0.3));
+    }
+
+    .jelly-itch.left {
+        left: -25vw;
+        top: 7%;
+        animation:
+                itch-bob-left 6s ease-in-out infinite,
+                jelly-pulse 4s ease-in-out infinite;
+    }
+
+    /* Right Jellyfish Position (Flipped) */
+    .jelly-itch.right {
+        right: -18vw;
+        top: 70%;
+        transform: scaleX(-1); /* Flips it to face inward */
+        animation:
+                itch-bob-right 7s ease-in-out infinite,
+                jelly-pulse 5s ease-in-out infinite;
     }
 }

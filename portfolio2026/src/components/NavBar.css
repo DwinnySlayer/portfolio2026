@@ -15,12 +15,50 @@
 
 /* Centers the content and spreads it out */
 .nav-container {
-    max-width: 1200px;
+    /*max-width: 1200px;*/
+    /*width: auto;*/
     margin: 30px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: normal; !* Changed from space-between/flex-end *!*/
+    /*align-items: center;*/
+    /*height: 100%;*/
+    /*background-color: #747bff;*/
     display: flex;
-    justify-content: flex-start; /* Changed from space-between/flex-end */
+    justify-content: space-between; /* Pushes left and right sections apart */
     align-items: center;
+    width: 100%;
     height: 100%;
+}
+
+.nav-left-side {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right-side {
+    /*width: auto;*/
+    display: flex;
+    /*justify-content: flex-end;*/
+    align-items: center;
+    /*background-color: #747bff;*/
+    gap: 5px;
+}
+
+/* Define the spinning motion */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.starfish-img {
+    width: 3vw;
+    height: auto;
+    animation: spin 10s linear infinite;
 }
 
 .nav-stack {
@@ -124,11 +162,30 @@
     .nav-container {
         margin: 0;
         width: 100%;
-        justify-content: flex-start; /* Move toggle to the right on mobile */
+        justify-content: space-between; /* Move toggle to the right on mobile */
+    }
+
+    .nav-left-side {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-right-side {
+        /*width: auto;*/
+        display: flex;
+        /*justify-content: flex-end;*/
+        align-items: center;
+        /*background-color: #747bff;*/
+        gap: 5px;
     }
 
     /* 3. Scale Icons for Fingers */
     .icon-img {
+        width: 30px;  /* Minimum tap target size */
+        height: 30px;
+    }
+
+    .starfish-img {
         width: 30px;  /* Minimum tap target size */
         height: 30px;
     }

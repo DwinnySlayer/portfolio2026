@@ -67,7 +67,7 @@ function Profile() {
                         </div>
                         <div className="section-body-container">
                             <Typography variant="p2" style={{ width: "auto", height: "auto"}}>
-                                Hi, I’m Dwin — a design and frontend development enthusiast
+                                A design and frontend development enthusiast
                                 who enjoys crafting clean, responsive, and user-centered interfaces.
                                 I’m currently seeking an internship where I can learn, collaborate,
                                 and turn creative ideas into engaging digital experiences.
