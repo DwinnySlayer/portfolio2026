@@ -100,7 +100,7 @@
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 100%;
+    height: auto;
     /*background-color: #BCC9CD;*/
 }
 
@@ -275,7 +275,8 @@
     }
 
     .profile {
-        padding: 40px; /* Reduce outer padding on small screens */
+        padding-top: 15vw;
+        /*padding: 40px; !* Reduce outer padding on small screens *!*/
     }
 
     .profile-card {
@@ -305,7 +306,7 @@
 
     .profile-right-side {
         width: 100%;    /* Take full width when stacked */
-        height: 250px;   /* Grow based on content */
+        height: auto;   /* Grow based on content */
         padding-top: 1vw;
         padding-bottom: 1vw;
     }
