@@ -21,7 +21,7 @@ function NavBar() {
                 <div className="nav-left-side">
                     <div className={`nav-stack ${isOpen ? 'open' : ''}`}>
                         <div className="nav-links">
-                            {/* The clickable toggle button - always on top */}
+                            {/* The clickable toggle button */}
                             <div className="nav-item toggle-btn" onClick={() => setIsOpen(!isOpen)}>
                                 <img
                                     src={isOpen ? closeIcon : openIcon}
@@ -30,17 +30,17 @@ function NavBar() {
                                 />
                             </div>
 
-                            {/* Home Icon */}
-                            <NavLink to="/design" className="nav-item item-4">
+                            {/* Added data-name to each NavLink */}
+                            <NavLink to="/design" className="nav-item item-4" data-name="DESIGN">
                                 <img src={designIcon} alt="Design" className="icon-img"/>
                             </NavLink>
-                            <NavLink to="/poster" className="nav-item item-3">
+                            <NavLink to="/poster" className="nav-item item-3" data-name="POSTERS">
                                 <img src={posterIcon} alt="Poster" className="icon-img" />
                             </NavLink>
-                            <NavLink to="/profile" className="nav-item item-2">
+                            <NavLink to="/profile" className="nav-item item-2" data-name="PROFILE">
                                 <img src={profileIcon} alt="Profile" className="icon-img" />
                             </NavLink>
-                            <NavLink to="/" className="nav-item item-1">
+                            <NavLink to="/" className="nav-item item-1" data-name="HOME">
                                 <img src={homeIcon} alt="Home" className="icon-img" />
                             </NavLink>
                         </div>

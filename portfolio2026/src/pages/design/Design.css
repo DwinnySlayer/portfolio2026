@@ -1,21 +1,193 @@
 .design {
     background-color: #ffffff;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers your text horizontally */
+    justify-content: center; /* This centers your text vertically */
     box-sizing: border-box;
-    padding: 50px;
+    gap: 1vw;
+    padding-top: 50px;
 }
 
-.webdev-header-title {
-    padding-top: 20px;
-    /*background-color: #535bf2;*/
+.design-container-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    gap: 1vw;
 }
 
-.webdev-title-img {
-    width: 35vw;
+.design-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.left-card {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #071E2F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleimages {
+    width: 100%;
     height: auto;
+}
+
+.right-card {
+    flex: 1;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px; /* Now you can add as much padding as you want */
+    display: flex;
+    flex-direction: column;
+    z-index: 1; /* Ensure content stays above the border */
+}
+
+.right-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 1.5px; /* This defines your border thickness */
+    background: linear-gradient(to bottom right, #4A6A82, #D1D9E0, transparent);
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.card-content {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+}
+
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.card-icon-img {
+    width: 2vw;
+    height: auto;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Space between buttons */
+    padding-top: 10px;
+}
+
+.nav-btn {
+    flex: 1; /* Makes both buttons equal width */
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.8vw;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+
+    /* Default style (Figma button) */
+    background-color: #E2E8F0;
+    color: #4A6A82;
+}
+
+.nav-btn.dark {
+    /* Dark style (Website button) */
+    background-color: #4A6A82;
+    color: white;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(0.9);
+}
+
+/* Ensure card-content allows bottom alignment */
+.card-content {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Changed from auto to 100% to fill space */
+    justify-content: space-between;
+}
+
+@media (max-width: 768px)  {
+    .design {
+        /*padding-top: 60px;*/
+        padding: 80px 20px;
+        justify-content: flex-start; /* Better for scrolling on long pages */
+    }
+
+    .variant-h4 {
+        font-size: 17px;
+    }
+
+    .variant-p2 {
+        font-size: 13px !important;
+    }
+
+    /* Stack the projects vertically */
+    .design-container-row {
+        flex-direction: column;
+        width: 80%;
+        gap: 30px;
+    }
+
+    /* Stack the image box and text box */
+    .design-card {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    /* Reset width from 25vw to something readable on small screens */
+    .card-content {
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Make icons larger for mobile fingers */
+    .card-icon-img {
+        width: 30px;
+    }
+
+    /* Adjust typography and button sizes */
+    .nav-btn {
+        font-size: 10px; /* Fix font size so it's readable */
+        padding: 12px 10px;
+    }
+
+    /* Ensure the left card (navy frame) takes full width */
+    .left-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .titleimages {
+        max-width: 100%;
+    }
+
 }
