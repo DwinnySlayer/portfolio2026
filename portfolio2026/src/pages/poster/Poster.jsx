@@ -21,9 +21,9 @@ export default function Poster() {
 
     return (
             <div className="poster">
-                <div className="page-header-title">
-                    <img src={header} alt="poster-header" className="page-header-image"></img>
-                </div>
+                {/*<div className="page-header-title">*/}
+                {/*    <img src={header} alt="poster-header" className="page-header-image"></img>*/}
+                {/*</div>*/}
 
                 <div className="poster-container">
                     <div className="poster-row-vertical">

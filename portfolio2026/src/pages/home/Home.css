@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;600;700;800&family=MonteCarlo&family=Ramabhadra&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;600;700;800&family=MonteCarlo&family=Ramabhadra&family=Poppins:wght@300;400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 .home {
     position: relative;
@@ -15,59 +14,6 @@
     /*padding-top: 100px;*/
     /*top: 20px;*/
 }
-
-/*@keyframes swim {*/
-/*    0% {*/
-/*        top: 20%;*/
-/*        left: -10%;*/
-/*        transform: rotate(0deg);*/
-/*    }*/
-/*    25% {*/
-/*        top: 40%;*/
-/*        left: 30%;*/
-/*        transform: rotate(50deg);*/
-/*    }*/
-/*    50% {*/
-/*        top: 10%;*/
-/*        left: 60%;*/
-/*        transform: rotate(240deg);*/
-/*    }*/
-/*    75% {*/
-/*        top: 60%;*/
-/*        left: 90%;*/
-/*        transform: rotate(160deg);*/
-/*    }*/
-/*    100% {*/
-/*        top: 20%;*/
-/*        left: 110%; !* Swims off screen to the right *!*/
-/*        transform: rotate(0deg);*/
-/*    }*/
-/*}*/
-
-/*@keyframes jelly-pulse {*/
-/*    0%, 100% {*/
-/*        transform: scale(1) skew(0deg);*/
-/*        filter: drop-shadow(0 0 10px rgba(110, 172, 218, 0.3));*/
-/*    }*/
-/*    50% {*/
-/*        !* This creates the "contraction" look *!*/
-/*        transform: scale(1.1) skew(5deg);*/
-/*        filter: drop-shadow(0 0 20px rgba(110, 172, 218, 0.6));*/
-/*    }*/
-/*}*/
-
-/*.jellyfish-float {*/
-/*    position: absolute;*/
-/*    width: 15vw;*/
-/*    min-width: 80px;*/
-/*    opacity: 0.6;*/
-/*    z-index: 0;*/
-/*    pointer-events: none;*/
-/*    filter: drop-shadow(0 0 10px rgba(110, 172, 218, 0.3));*/
-/*    animation:*/
-/*            swim 40s ease-in-out infinite,*/
-/*            jelly-pulse 4s ease-in-out infinite;*/
-/*}*/
 
 /* Base styles for both */
 .jelly-itch {
@@ -153,6 +99,41 @@
     place-items: center;
     /*background-color: #747bff;*/
 }
+
+/* The Glitter Shimmer Effect */
+.home-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%; /* Start off-screen */
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg); /* Tilts the shimmer for a more natural look */
+    z-index: 3; /* Sits on top of the orbit and title */
+    pointer-events: none;
+
+    /* Animation: sweep every 4 seconds */
+    animation: shimmer 8s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -150%;
+    }
+    30% {
+        left: 150%; /* Sweeps across the word */
+    }
+    100% {
+        left: 150%; /* Pause before the next sweep */
+    }
+}
+
 
 .orbit-img {
     padding-top: 10px;
@@ -256,6 +237,34 @@
     margin-top: 10px;
 }
 
+.reserved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 0px 0; /* Added a bit more breathing room */
+    margin-top: auto;
+    width: 30%;
+    position: relative;
+}
+
+.reserved-logo {
+    width: 3vw;
+    height: auto;
+    padding-bottom: 0;
+}
+
+.reserved-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 200; /* Light weight for a modern feel */
+    color: #444;
+    text-align: center;
+    max-width: 90%;
+    letter-spacing: 0.1px;
+    line-height: 1.2;
+}
+
 /* Mobile specific overrides */
 @media (max-width: 768px) {
 
@@ -350,4 +359,33 @@
         z-index: 1; /* Ensures it sits on top of the title */
         pointer-events: none;
     }
+
+    .reserved {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 0 0px 0; /* Added a bit more breathing room */
+        margin-top: auto;
+        width: 50%;
+        position: relative;
+    }
+
+    .reserved-logo {
+        width: 6vw;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .reserved-text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 7px;
+        font-weight: 200; /* Light weight for a modern feel */
+        color: #444;
+        text-align: center;
+        max-width: 90%;
+        letter-spacing: 0.1px;
+        line-height: 1.2;
+    }
+
 }

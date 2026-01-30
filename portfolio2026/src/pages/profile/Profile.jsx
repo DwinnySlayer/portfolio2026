@@ -23,16 +23,15 @@ import python from "../../assets/pythonicon.png";
 import profiletitle from "../../assets/profiletitle.png";
 
 
-
 import { Divider } from '@mui/material';
 import Typography from "../../components/Typography.jsx";
 
 function Profile() {
     return (
         <div className="profile">
-            <div className="profile-title">
-                <img src={profiletitle} alt="title" className="profile-title-img"></img>
-            </div>
+            {/*<div className="profile-title">*/}
+            {/*    <img src={profiletitle} alt="title" className="profile-title-img"></img>*/}
+            {/*</div>*/}
             <div className="profile-card">
                 {/*left side of profile card*/}
                 <div className="profile-left-side">

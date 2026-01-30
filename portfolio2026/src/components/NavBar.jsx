@@ -13,7 +13,7 @@ import selfpicture from "../assets/selfpicture.png";
 import shell from "../assets/shell.png";
 
 function NavBar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
 
     return (
         <nav className="navbar">

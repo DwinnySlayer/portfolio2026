@@ -7,6 +7,7 @@ import hometitle from "../../assets/HomeTitle.png";
 import Typography from "../../components/Typography.jsx";
 import jellyfish from "../../assets/jellyfish.png";
 import orbit from "../../assets/orbit.png";
+import reservedlogo from "../../assets/reservedlogo.png";
 
 function Home() {
 
@@ -39,6 +40,13 @@ function Home() {
                 I enjoy turning ideas into functional interfaces
                 by combining thoughtful design with responsive code.
             </Typography>
+
+            <div className="reserved">
+                <img src={reservedlogo} alt="icon" className="reserved-logo" />
+                <p className="reserved-text">
+                    All Rights Reserved. Reproduction without permission is prohibited | Made with Figma | Canva
+                </p>
+            </div>
         </div>
     );
 }

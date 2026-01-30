@@ -12,9 +12,11 @@ import webdev from "../../assets/webdev.png";
 export default function Design() {
     return (
         <div className="design">
-            <div className="webdev-header-title">
-                <img src={webdev} alt="title" className="webdev-title-img"></img>
-            </div>
+            {/*<div className="webdev-header-title">*/}
+            {/*    <img src={webdev} alt="title" className="webdev-title-img"></img>*/}
+            {/*</div>*/}
+
+
         </div>
     )
 }

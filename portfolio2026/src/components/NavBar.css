@@ -104,6 +104,7 @@
     width: 2.5vw;
     height: 2.5vw;
     display: block;
+    border-radius: 50%;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
