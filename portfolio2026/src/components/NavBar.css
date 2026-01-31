@@ -1,6 +1,21 @@
 /* Container for the whole bar */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;600;700;800&family=MonteCarlo&family=Ramabhadra&family=Poppins:wght@300;400&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
+@keyframes ferrisWheel {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nav-item.active .icon-img {
+    animation: ferrisWheel 15s linear infinite;
+    /* Optional: filter to make the active icon pop slightly */
+    filter: brightness(1.2) drop-shadow(0 0 5px rgba(110, 172, 218, 0.5));
+}
+
 .navbar {
     background-color: transparent;
     height: 5vw; /* Set a definitive height */
@@ -60,7 +75,7 @@
 .starfish-img {
     width: 3vw;
     height: auto;
-    animation: spin 10s linear infinite;
+    animation: spin 15s linear infinite;
 }
 
 .nav-stack {
