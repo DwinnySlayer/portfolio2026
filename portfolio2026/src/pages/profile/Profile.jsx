@@ -37,11 +37,11 @@ function Profile() {
         <div className="profile">
 
             {/* BACKGROUND FLARES */}
-            <img src={orange1} alt="" className="flare flare-orange-top" />
-            <img src={blue1} alt="" className="flare flare-blue-top" />
-            <img src={blue3} alt="" className="flare flare-blue-left"/>
-            <img src={orange2} alt="" className="flare flare-orange-bottom" />
-            <img src={blue2} alt="" className="flare flare-blue-right" />
+            {/*<img src={orange1} alt="" className="flare flare-orange-top" />*/}
+            {/*<img src={blue1} alt="" className="flare flare-blue-top" />*/}
+            {/*<img src={blue3} alt="" className="flare flare-blue-left"/>*/}
+            {/*<img src={orange2} alt="" className="flare flare-orange-bottom" />*/}
+            {/*<img src={blue2} alt="" className="flare flare-blue-right" />*/}
 
             <div className="new-card">
                 <div className="captch-wrapper">

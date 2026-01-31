@@ -25,18 +25,148 @@
 }
 
 .left-card {
-    padding: 10px;
+    /*padding: 10px;*/
     border-radius: 20px;
-    background-color: #071E2F;
+    width: 25vw;
+    /*background-color: #071E2F;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.titleimages {
+.folder-wrapper {
+    position: relative;
+    width: 100%; /* Ensure it takes up the left-card width */
+    display: block;
+}
+
+
+.folder-logo {
+    position: absolute;
+    bottom: 5%; /* Adjust this to sit vertically in the middle of the dark blue flap */
+    left: 50%;
+    transform: translateX(-50%); /* This perfectly centers it horizontally */
+    width: 10svw; /* Smaller size to match your goal image */
+    height: auto;
+    z-index: 7; /* Stays above everything */
+    pointer-events: none; /* Mouse ignores it to allow card hovering */
+}
+
+.folder-img {
     width: 100%;
     height: auto;
+    /*display: block;*/
+}
+
+.folder-img.back {
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.folder-img.front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3; /* Top layer */
+}
+
+.folder-img.front {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3; /* Always on top UNLESS folder is open */
+    pointer-events: none; /* Allows clicks to pass through to the card */
+}
+
+
+/* The project image container */
+.project-screenshot-container {
+    position: absolute;
+    /* Vertically: sit slightly above the bottom flap */
+    top: 25%;
+
+    /* Horizontally: move to middle, then pull back by half its own width */
+    left: 50%;
+    transform: translateX(-40%);
+
+    /* Size: ensure it's smaller than the folder so it looks 'tucked in' */
+    width: 85%;
+
+    z-index: 2; /* Sits behind the front flap but in front of the back */
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden; /* Keeps the screenshot image inside the rounded corners */
+    animation: tuckBackIn 0.5s forwards ease-in-out;
+}
+
+@keyframes popOutAndLand {
+    0% {
+        top: 15%;
+        left: 60%;
+        z-index: 2;
+        /* Keep translateX(-50%) in every transform line */
+        transform: translateX(-50%) scale(1) rotate(0deg);
+    }
+    45% {
+        top: -65%;
+        left: 60%;
+        z-index: 2;
+        transform: translateX(-50%) scale(1.05) rotate(-5deg);
+    }
+    55% {
+        top: -65%;
+        left: 60%;
+        z-index: 10;
+        transform: translateX(-50%) scale(1.05) rotate(-5deg);
+    }
+    100% {
+        top: 15%; /* Landed position - adjust as needed */
+        left: 60%;
+        z-index: 10;
+        width: 95%;
+        transform: translateX(-50%) scale(1.1) rotate(0deg);
+    }
+}
+
+@keyframes tuckBackIn {
+    0% {
+        top: 15%;
+        left: 60%;
+        z-index: 10;
+        transform: translateX(-50%) scale(1.1) rotate(0deg);
+    }
+    45% {
+        top: -65%;
+        left: 60%;
+        z-index: 10;
+        transform: translateX(-50%) scale(1.05) rotate(-5deg);
+    }
+    55% {
+        top: -65%;
+        left: 60%;
+        z-index: 2;
+    }
+    100% {
+        top: 20%;
+        left: 60%;
+        z-index: 2;
+        transform: translateX(-50%) scale(1) rotate(0deg);
+    }
+}
+
+.titleimages {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
+/* Hover Effect: Folder "opens" or image pops up */
+.design-container-row:not(.is-open) .design-card:hover .project-screenshot-container {
+    animation: popOutAndLand 0.6s forwards cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    /*transform: translateY(-40px) rotate(20deg); !* Increased movement for better visibility *!*/
+    /*z-index: 5;*/
 }
 
 .right-card {

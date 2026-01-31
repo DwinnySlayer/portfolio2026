@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import "./Design.css"
 
 import resbacweb from "../../assets/resbacweb.png";
@@ -12,16 +12,40 @@ import js from "../../assets/jsicon.png";
 import html from "../../assets/htmlicon.png";
 import css from "../../assets/cssicon.png";
 
+import folderback from "../../assets/folderback.png";
+import folderfront from "../../assets/folderfront.png";
+import turle from "../../assets/turtle.png";
+import whale from "../../assets/whale.png";
+
 
 
 export default function Design() {
+    // // State to track which folder is active (null, 0, or 1)
+    // const [activeFolder, setActiveFolder] = useState(null);
+    //
+    // const toggleFolder = (index) => {
+    //     setActiveFolder(activeFolder === index ? null : index);
+    // };
+
     return (
         <div className="design">
             <div className="design-container-row">
                 <div className="design-card">
                     <div className="left-card">
-                        <img src={resbacweb} alt="image" className="titleimages"></img>
+                        <div className="folder-wrapper">
+                            <img src={folderback} alt="" className="folder-img back" />
+
+                            <div className="project-screenshot-container">
+                                <img src={resbacweb} alt="project" className="titleimages" />
+                            </div>
+
+                            <img src={folderfront} alt="" className="folder-img front" />
+                            <img src={turle} alt="" className="folder-logo"></img>
+                        </div>
+
                     </div>
+
+
                     <div className="right-card">
                         <div className="card-content">
                             <Typography variant="h4" style={{lineHeight: "1.2"}}>
@@ -71,8 +95,18 @@ export default function Design() {
             <div className="design-container-row">
                 <div className="design-card">
                     <div className="left-card">
-                        <img src={resbacapp} alt="image" className="titleimages"></img>
+                        <div className="folder-wrapper">
+                            <img src={folderback} alt="" className="folder-img back" />
+
+                            <div className="project-screenshot-container">
+                                <img src={resbacapp} alt="project" className="titleimages" />
+                            </div>
+
+                            <img src={folderfront} alt="" className="folder-img front" />
+                            <img src={whale} alt="" className="folder-logo"></img>
+                        </div>
                     </div>
+
                     <div className="right-card">
                         <div className="card-content">
                             <Typography variant="h4" style={{lineHeight: "1.2"}}>
