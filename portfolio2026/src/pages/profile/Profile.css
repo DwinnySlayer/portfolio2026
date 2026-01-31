@@ -1,30 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap');
 
 .profile {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
     background-color: #ffffff;
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; /* This centers your text horizontally */
     justify-content: center; /* This centers your text vertically */
     box-sizing: border-box;
     padding: 50px;
+    gap: 20px;
 
-}
-
-.profile-title {
-    display: flex;
-    place-items: center;
-}
-
-.profile-title-img {
-    width: 20vw;
-    height: auto;
 }
 
 .profile-card {
-    width: 50vw;
+    position: relative;
+    z-index: 2;
+    flex: 0 0 33%; /* Adjust this percentage to your liking */
+    min-width: 300px;
     height: 30vw;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-radius: 10px;
@@ -38,59 +35,107 @@
     border: 0.1vw;
     background-image:
             linear-gradient(white, white),
-            linear-gradient(to right, #11344D 20%, #6EACDA 100%); /* Start transition at 50% */
+            linear-gradient(to right, #11344D44 20%, #6EACDA 100%); /* Start transition at 50% */
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
 
-.profile-left-side {
+.new-card {
     position: relative;
-    /*display: grid;*/
-    display: flex;
-    flex-direction: row;
-    place-items: center;
-    width: 40%;
-    height: 100%;
-}
-
-.profile-picture {
-    position: absolute;
-    height: 90%;
-    width: 90%;
-    z-index: 3;
-    pointer-events: none;
-    bottom: 0;
-}
-
-.aboutme-image {
-    position: absolute;
-    width: 90%;
-    height: 30%;
     z-index: 2;
-    right: 0;
-    pointer-events: none;
+    flex: 0 0 23%; /* This will now respect the 30% width of the .profile container */
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*width: 30%;*/
+    /*height: 30vw;*/
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    /*display: flex;*/
+    flex-direction: row;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    gradient: border;
+    padding: 1px;
+    border: 0.1vw;
+    background-image:
+            linear-gradient(white, white),
+            linear-gradient(to right, #11344D44 20%, #6EACDA 100%); /* Start transition at 50% */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
 }
 
-.accent-img {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    z-index: 1;
-    left:0;
+.new-card-img{
+    width: 20.55vw;
+    height: auto;
 }
 
-.age-badge {
+.captcha-wrapper {
+    position: relative;
+    width: auto;
+    /*max-width: 320px; !* Adjust based on your image size *!*/
+    border: 1px solid #d1d9e0;
+    border-radius: 8px;
+    /*overflow: hidden;*/
+    background: #747bff;
+
+}
+
+.profile-footer-controls {
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #000000;
-    color: #BCC9CD;
-    padding: 0.5rem 1rem;
-    z-index: 4;
+    width: auto;
+    height: 50px;
+    background-color: white;
+    /*border-top: 1px solid #e0e0e0;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+}
 
-    font-family: 'Ramabhadra', sans-serif;
-    font-size: 1.5rem;
-    border-radius: 0 10px 0 0;
+.control-icons {
+    display: flex;
+    gap: 5px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    /*cursor: pointer;*/
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.control-btn:hover img {
+    filter: opacity(1);
+    transform: scale(1.1);
+}
+
+/* Verify Button */
+.verify-button {
+    /*padding-left: 5px;*/
+    background-color: #f1965e; /* The orange/peach color from your photo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.verify-button:hover {
+    background-color: #e07b42;
 }
 
 /*css for right panel*/
@@ -99,8 +144,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 100%;
     height: auto;
+    gap: 5px;
     /*background-color: #BCC9CD;*/
 }
 
@@ -257,29 +303,78 @@
     height: 2.6vw;
 }
 
+.variant-h3 {
+    line-height: 1.0;
+    font-size: 13.5px !important;
+    /*padding-left: 1vw;*/
+    font-weight: 400;
+}
+
+.flare {
+    position: absolute;
+    pointer-events: none; /* User can click through them to the cards */
+    z-index: -1; /* Sits behind everything */
+    width: 40vw; /* Adjust size based on how big you want the glow */
+    height: auto;
+    opacity: 0.6; /* Softens the effect */
+    filter: blur(20px); /* Optional: extra softness if the PNGs are sharp */
+}
+
+/* Specific Positions based on your Figma screenshot */
+.flare-orange-top {
+    top: -15%;
+    left: 5%;
+    transform: rotate(-15deg);
+}
+
+.flare-blue-top {
+    top: -20%;
+    right: -5%;
+}
+
+.flare-orange-bottom {
+    bottom: -20%;
+    left: 35%;
+}
+
+.flare-blue-right {
+    bottom: -20%;
+    left: -0%;
+    width: 30vw;
+}
+
+.flare-blue-left {
+    bottom: 10%;
+    /*left: -5%;*/
+    right: 6%;
+    width: 30vw;
+}
 
 /*responsiveness*/
 /* Responsive adjustments for Tablets and Mobile */
 @media (max-width: 768px) {
-    .profile-title {
-        padding-top: 10px;
-        padding-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .profile-title-img {
-        width: 40vw;
-    }
-
     .profile {
         padding-top: 15vw;
+        display: flex;
+        flex-direction: column;
         /*padding: 40px; !* Reduce outer padding on small screens *!*/
     }
 
+    .new-card {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .new-card-img{
+        width: 65vw;
+        height: auto;
+    }
+
     .profile-card {
+        order: 1;
         width: 65vw;    /* Take up more screen width */
         height: auto;   /* CRITICAL: Let the card grow vertically */
         flex-direction: column; /* Stack left side (image) on top of right side (info) */
@@ -318,6 +413,8 @@
         gap: 1vw;
         padding-top: 0.5vw;
         padding-bottom: 1vw;
+        align-items: center;
+        justify-content: center;
     }
 
     .roles-rectangle {
@@ -329,11 +426,13 @@
         padding-left: 1vw;
         padding-right: 1vw;
         background-color: #D9D9D9;
+        align-items: center;
+        justify-content: center;
     }
 
     .roles-img {
-        width: 3vw;
-        height: 3vw;
+        width: 2vw;
+        height: 2vw;
     }
 
     .variant-h1 {
@@ -352,13 +451,14 @@
     }
 
     .variant-p1 {
-        font-size: 12px;
+        font-size: 13px;
         padding-left: 1vw;
         font-weight: 600;
     }
 
-    .variant-p2 {
-        font-size: 10px !important;
+    .variant-h3 {
+        line-height: 1.0;
+        font-size: 12px !important;
         padding-left: 1vw;
         font-weight: 400;
     }

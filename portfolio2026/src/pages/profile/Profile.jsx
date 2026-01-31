@@ -2,9 +2,6 @@ import React from 'react'
 import "./Profile.css"
 
 // importing photos
-import profilepic from "../../assets/myimage.png";
-import accentblue from "../../assets/accentbar.png";
-import textaccent from "../../assets/textaccent.png";
 import frontend from "../../assets/frontendicon.png";
 import design from "../../assets/designicon.png";
 import blackprofile from "../../assets/profileiconblack.png";
@@ -20,7 +17,16 @@ import expicon from "../../assets/expicon.png";
 import sissy from "../../assets/workicon.png";
 import vsicon from "../../assets/vsicon.png";
 import python from "../../assets/pythonicon.png";
-import profiletitle from "../../assets/profiletitle.png";
+import headphoneicon from "../../assets/headphoneicon.png";
+import infoicon from "../../assets/infoicon.png";
+import newcard from "../../assets/newcard.png";
+import refreshicon from "../../assets/refreshicon.png";
+import blue1 from "../../assets/blue1.png";
+import blue2 from "../../assets/blue2.png";
+import blue3 from "../../assets/blue3.png";
+import orange1 from "../../assets/orange1.png";
+import orange2 from "../../assets/orange2.png";
+
 
 
 import { Divider } from '@mui/material';
@@ -29,18 +35,39 @@ import Typography from "../../components/Typography.jsx";
 function Profile() {
     return (
         <div className="profile">
-            {/*<div className="profile-title">*/}
-            {/*    <img src={profiletitle} alt="title" className="profile-title-img"></img>*/}
-            {/*</div>*/}
-            <div className="profile-card">
-                {/*left side of profile card*/}
-                <div className="profile-left-side">
-                    <img src={accentblue} alt="blue" className="accent-img"></img>
-                    <img src={textaccent} alt="aboutme aboutme aboutme" className="aboutme-image"></img>
-                    <img src={profilepic} alt="Mark Aldwin" className="profile-picture"></img>
-                    <div className="age-badge">22</div>
-                </div>
 
+            {/* BACKGROUND FLARES */}
+            <img src={orange1} alt="" className="flare flare-orange-top" />
+            <img src={blue1} alt="" className="flare flare-blue-top" />
+            <img src={blue3} alt="" className="flare flare-blue-left"/>
+            <img src={orange2} alt="" className="flare flare-orange-bottom" />
+            <img src={blue2} alt="" className="flare flare-blue-right" />
+
+            <div className="new-card">
+                <div className="captch-wrapper">
+                    <img src={newcard} alt="card" className="new-card-img"></img>
+                    <div className="profile-footer-controls">
+                        <div className="control-icons">
+                            <button className="control-btn">
+                                <img src={refreshicon} alt="refresh" />
+                            </button>
+                            <button className="control-btn">
+                                <img src={headphoneicon} alt="audio" />
+                            </button>
+                            <button className="control-btn">
+                                <img src={infoicon} alt="info" />
+                            </button>
+
+                            <button className="verify-button">
+                                VERIFY
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div className="profile-card">
                 <div className="profile-right-side">
                     <div className="roles-container">
                         <div className="roles-rectangle">
@@ -99,7 +126,7 @@ function Profile() {
                                 <Typography variant="p1">
                                     Polytechnic University of the Philippines
                                 </Typography>
-                                <Typography variant="p2">
+                                <Typography variant="h3">
                                     Bachelor of Science in Information Technology
                                 </Typography>
                             </div>
@@ -176,7 +203,7 @@ function Profile() {
                                 <Typography variant="p1">
                                     Sissy SoFab Japan Surplus and Variety Hub
                                 </Typography>
-                                <Typography variant="p2">
+                                <Typography variant="h3">
                                     Designer | Admin
                                 </Typography>
                             </div>

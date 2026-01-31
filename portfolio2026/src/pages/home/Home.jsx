@@ -9,6 +9,7 @@ import jellyfish from "../../assets/jellyfish.png";
 import orbit from "../../assets/orbit.png";
 import reservedlogo from "../../assets/reservedlogo.png";
 
+
 function Home() {
 
     return (
@@ -44,7 +45,8 @@ function Home() {
             <div className="reserved">
                 <img src={reservedlogo} alt="icon" className="reserved-logo" />
                 <p className="reserved-text">
-                    All Rights Reserved. Reproduction without permission is prohibited | Made with Figma | Canva
+                    All Rights Reserved. Reproduction without permission is prohibited | Made with Figma | Canva | Contact:
+                    09434103391 - uriartemarkaldwin@gmail.com
                 </p>
             </div>
         </div>
