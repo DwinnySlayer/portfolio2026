@@ -16,6 +16,9 @@ import folderback from "../../assets/folderback.png";
 import folderfront from "../../assets/folderfront.png";
 import turle from "../../assets/turtle.png";
 import whale from "../../assets/whale.png";
+import statusgreen from "../../assets/statusgreen.png";
+import statusred from "../../assets/statusred.png";
+import sissyweb from "../../assets/sissyweb.png";
 
 
 
@@ -51,6 +54,12 @@ export default function Design() {
                             <Typography variant="h4" style={{lineHeight: "1.2"}}>
                                RESBAC WEB [Capstone Project]
                             </Typography>
+                            <div className="icon-row">
+                                <img src={statusgreen} alt="icon" className="status-img"></img>
+                                <Typography variant="h3" style={{lineHeight: "1.2"}}>
+                                    Project Done!
+                                </Typography>
+                            </div>
                             <Typography variant="p2" style={{lineHeight: "1.2"}}>
                                 RESBAC is a multi-platform disaster response system that transforms vulnerability into visibility.
                                 A Website for LGU to visualize, manage, and prioritize rescues in real time. Technology used are
@@ -112,6 +121,12 @@ export default function Design() {
                             <Typography variant="h4" style={{lineHeight: "1.2"}}>
                                 RESBAC APPLICATION [Capstone Project]
                             </Typography>
+                            <div className="icon-row">
+                                <img src={statusgreen} alt="icon" className="status-img"></img>
+                                <Typography variant="h3" style={{lineHeight: "1.2"}}>
+                                    Project Done!
+                                </Typography>
+                            </div>
                             <Typography variant="p2" style={{lineHeight: "1.2"}}>
                                 RESBAC is a multi-platform disaster response system that transforms vulnerability into visibility.
                                 A mobile application for vulnerable citizens to register, request help, and mark themselves safe.
@@ -147,6 +162,78 @@ export default function Design() {
                                     className="nav-btn dark"
                                 >
                                     APPLICATION
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="design-container-row">
+                <div className="design-card">
+                    <div className="left-card">
+                        <div className="folder-wrapper">
+                            <img src={folderback} alt="" className="folder-img back" />
+
+                            <div className="project-screenshot-container">
+                                <img src={sissyweb} alt="project" className="titleimages" />
+                            </div>
+
+                            <img src={folderfront} alt="" className="folder-img front" />
+                            <img src={turle} alt="" className="folder-logo"></img>
+                        </div>
+
+                    </div>
+
+
+                    <div className="right-card">
+                        <div className="card-content">
+                            <Typography variant="h4" style={{lineHeight: "1.2"}}>
+                                SISSY WEB [Own Project]
+                            </Typography>
+                            <div className="icon-row">
+                                <img src={statusred} alt="icon" className="status-img"></img>
+                                <Typography variant="h3" style={{lineHeight: "1.2"}}>
+                                    Project On-going!
+                                </Typography>
+                            </div>
+                            <Typography variant="p2" style={{lineHeight: "1.2"}}>
+                                Sissy Sofab is a premier Japan surplus business specializing in high-quality,
+                                authentic pre-loved goods at accessible prices. Our Sissy Web platform is designed for a
+                                seamless user experience, featuring an intuitive system navigation that allows you to
+                                manage your journey through a centralized Dashboard and Invoice section.
+                                To ensure complete transparency, the system includes real-time trackers for Payment Status,
+                                Packing Status, and Shipment Status, alongside easy-to-use Account management and a secure Logout function.
+                            </Typography>
+
+                            <div className="icon-row">
+                                <img src={tool} alt="icon" className="card-icon-img"></img>
+                                {/*<img src={python} alt="icon" className="card-icon-img"></img>*/}
+                                <img src={figma} alt="icon" className="card-icon-img"></img>
+                                {/*<img src={js} alt="icon" className="card-icon-img"></img>*/}
+                                {/*<img src={html} alt="icon" className="card-icon-img"></img>*/}
+                                {/*<img src={css} alt="icon" className="card-icon-img"></img>*/}
+                            </div>
+
+                            <div className="button-row">
+                                {/* Figma Link */}
+                                <a
+                                    href=""
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="nav-btn"
+                                >
+                                    FIGMA
+                                </a>
+
+                                {/* Website Link */}
+                                <a
+                                    href="https://www.figma.com/design/oni2VO7DnK6MUD8b4fvDEw/SISSY-SOFAB-WEB?node-id=0-1&t=lzu333HQtzIF0QhR-1"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="nav-btn dark"
+                                >
+                                    WEBSITE
                                 </a>
                             </div>
                         </div>
