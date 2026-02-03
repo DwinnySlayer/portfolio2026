@@ -49,7 +49,9 @@ function NavBar() {
 
                 <div className="nav-right-side">
                     <img src={starfish} alt="icon" className="starfish-img"></img>
-                    <img src={selfpicture} alt="icon" className="icon-img"></img>
+                    <NavLink to="/contacts" data-name="CONTACTS" className="contact-link">
+                        <img src={selfpicture} alt="icon" className="icon-img"></img>
+                    </NavLink>
                     <img src={shell} alt="icon" className="starfish-img"></img>
                 </div>
             </div>

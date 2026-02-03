@@ -170,41 +170,35 @@
 
 /* The Paper Roll-Out (The "Rectangle" in your Figma) */
 .nav-item::after {
-    content: attr(data-name); /* Pulls "HOME" from the JSX */
+    content: attr(data-name);
     position: absolute;
-    /*left: 50%; !* Starts behind the icon *!*/
-    /*white-space: nowrap;*/
-    /*background-color: #E2E8F0; !* Light paper color *!*/
-    color: #071E2F; /* Dark text */
-    font-family: 'Ramabhadra', sans-serif;
-    /*font-weight: 7900;*/
-    font-size: 8px;
-    /*padding: 5px 15px 5px 25px; !* Extra left padding to clear the icon *!*/
-    border-radius: 5px;
-    /*border: 1px solid #071E2F;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
+    /* Position it below the icon */
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
 
-    /* Hidden State */
-    width: auto;
+    color: #FFFFFF;
+    /*font-family: 'Ramabhadra', sans-serif;*/
+    font-size: 10px; /* Increased slightly for readability */
+    font-weight: bold;
+
+    /* Background & Styling */
+    background-color: #11344D;
+    padding: 4px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+
+    /* Transition logic */
     opacity: 0;
-    overflow: hidden;
-    z-index: -1; /* Sits behind the icon */
-    transition: width 0.3s ease-out, opacity 0.2s;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 20;
 }
 
 /* Hover State: The Roll-Out! */
 .nav-item:hover::after {
-    width: auto; /* Adjust based on your word length */
     opacity: 1;
-    /*font-family: 'Poppins', sans-serif;*/
-    /*font-weight: 700;*/
-    font-size: 8px;
-    /*left: 20px; !* Slides out to the right *!*/
-    align-items: center;
-    justify-content: center;
+    transform: translateX(-50%) translateY(5px);
 }
 
 /* Optional: Slight lift on the icon itself when hovered */
@@ -213,8 +207,32 @@
     z-index: 2;
 }
 
-/*responsive*/
+/* Container must be relative for the tooltip position */
+.contact-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
+/* Tooltip styling */
+.contact-link:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    bottom: -35px; /* Adjust this to move the text up or down */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #11344D; /* Sissy Pink */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 100;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/*responsive*/
 @media (max-width: 768px) {
 
     .navbar {

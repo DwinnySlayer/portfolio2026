@@ -1,0 +1,149 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+     /*padding: 120px 20px 60px; !* Space for your fixed navbar *!*/
+     /*min-height: 100vh;*/
+    width: 100%;
+    min-height: 100vh;
+     /*margin: 0 auto;*/
+     font-family: 'Poppins', sans-serif;
+     text-align: center;
+    justify-content: center;
+     background-color: #071E2F;
+}
+
+.contact-header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 20px 0;
+    font-weight: 800;
+}
+
+.contact-header p {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.profile-img-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contact-grid {
+    display: grid;
+    /* Force exactly 3 columns on desktop */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px; /* Limits grid width so cards don't get too stretched */
+    margin: 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.contact-card .icon {
+    font-size: 2rem;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.contact-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.contact-card a, .contact-card p {
+    margin: 5px 0 0;
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.contact-card a:hover {
+    color: #ff69b4; /* Keeping that pink accent from your logo! */
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        /*padding: 120px 20px 60px; !* Space for your fixed navbar *!*/
+        /*min-height: 100vh;*/
+        width: 100%;
+        min-height: 100vh;
+        /*margin: 0 auto;*/
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        justify-content: center;
+        background-color: #071E2F;
+        padding-top: 10vh;
+    }
+
+    .contact-header h1 {
+        font-size: 2.5rem; /* Slightly smaller title */
+        margin-top: 10px;
+    }
+
+    .contact-header p {
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+    }
+
+    .contact-grid {
+        /* Change from 3 columns to 1 column for clean stacking */
+        grid-template-columns: 1fr;
+        gap: 15px; /* Tighter gap for smaller screens */
+        width: 75%;
+    }
+
+    .contact-card {
+        padding: 15px; /* Smaller padding inside cards */
+        gap: 15px;
+    }
+
+    .contact-card .icon {
+        font-size: 1.5rem; /* Scale down the icons */
+        padding: 10px;
+    }
+
+    .contact-card h3 {
+        font-size: 1rem;
+    }
+
+    .contact-card a, .contact-card p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Optional: Extra small adjustment for very thin phones */
+@media (max-width: 480px) {
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        flex-direction: row; /* Keep icon and text side-by-side */
+        align-items: center;
+    }
+}

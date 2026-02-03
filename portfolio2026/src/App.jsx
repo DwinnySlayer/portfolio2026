@@ -2,6 +2,7 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Posters from "./pages/poster/Poster";
 import Design from "./pages/design/Design";
+import Contacts from "./pages/contacts/Contacts";
 import LoadingBar from './components/LoadingBar';
 
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/design" element={<Design />} />
                 <Route path="/poster" element={<Posters />} />
+                <Route path="/contacts" element={<Contacts />} />
                 {/* add more routing below*/}
             </Routes>
         </Router>
